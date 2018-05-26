@@ -46,16 +46,10 @@
   
 }
 #mainhead {
-  font-family: "Kurale", serif;
   font-weight: bold;
 }
 #subtitle {
-  font-family: "Kurale", serif;
   font-style: italic;
-  font-weight: normal;
-}
-#subhead {
-  font-family: "Kurale", serif;
 }
 #subhead::after {
   content: "\A";
@@ -166,7 +160,6 @@
 }
 #quote {
   grid-area: quote;
-  hyphens: auto;
   font-family: "Courgette", cursive;
   background: white;
   font-size: 1rem;
@@ -183,7 +176,6 @@
 }
 #link {
   grid-area: link;
-  /*letter-spacing: 0.2px; */
   font-family: "Courgette", cursive;
   background: white;
   font-size: 1em;
@@ -243,7 +235,7 @@ h1 {
   font-family: "Kurale",Helvetica, serif;
   font-size: 1.728rem;
   font-weight: bold;
-  line-height: 1.5em;
+  line-height: 1.3em;
 }
 
 h2 {
