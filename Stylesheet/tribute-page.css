@@ -149,7 +149,7 @@
     grid-template-areas:
       "quote"
       "link";
-    align-items: center;
+    align-items: start;
   }
   #quote {
     grid-area: quote;
