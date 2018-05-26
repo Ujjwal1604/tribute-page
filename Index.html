@@ -108,27 +108,7 @@
       </aside>
     </div>
   </div>
-  <P id="report"></P>
-  <script>
-    var report = document.getElementById("report");
 
-function getFontSize() {
-  el=document.getElementById("img-caption");
-    var body = window.getComputedStyle(el, null);
-    if (body) {
-        var fontSize = body.getPropertyValue("font-size");
-        if (fontSize) {
-            fontSize = fontSize.replace("px", "");
-            fontSize = Math.round(fontSize * 10) / 10;
-            report.textContent = "Current root font-size: " + fontSize + "px - Viewport width: " + document.documentElement.clientWidth + "px";
-        }
-    }
-}
-if (report) {
-    getFontSize();
-    window.addEventListener("resize", getFontSize, false);
-}
-  </script>
 </body>
 
 </html>
