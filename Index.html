@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tribute Page</title>
-  <link rel="stylesheet" href="/Stylesheet/tribute-page.css">
+  <link rel="stylesheet" href="/Stylesheet/normalize.css">
+  <link rel="stylesheet" href="/Stylesheet/tribute-page.css"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Courgette|Kurale|Lobster|ABeeZee" rel="stylesheet">
   <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
 </head>
 
 <body>
   <div id="main">
     <header id="title">
-      <h1>A tribute to
-        <br> Sir Shanti Swaroop Bhatnagar- Father of Research Laboratories</h1>
+      <h1><span id="subhead">A tribute to</span><span id="mainhead"> Sir Shanti Swaroop Bhatnagar</span><span id="subtitle">-Father of Research Laboratories</span></h1>
     </header>
 
     <figure id="img-div">
-      <img src="/image/Bhatnagar1.jpg" alt="Dr. Bhatnagar with Dr. Nehru" id="image">
-      <br>
-      <figcaption id="img-caption">Sir Shanti Swaroop Bhatnagar with Jawaharlal Nehru, the First Prime Minister of India.</figcaption>
+      <a href="/Image/Bhatnagar1.jpg" target="_blank"><img src="/image/Bhatnagar1.jpg" alt="Dr. Bhatnagar with Dr. Nehru" id="image"></a>
+      <figcaption id="img-caption">Sir Shanti Swaroop Bhatnagar(Right) with Jawaharlal Nehru, the First Prime Minister of India.</figcaption>
     </figure>
 
     <div id="content-sidebar">
@@ -29,17 +29,17 @@
           <header id="tribute-info-header">
             <h2>Dr. Bhatnagar's life in a nutshell:</h2>
           </header>
-          <section id="early-life">
+          <section id="early-life" class="bio">
             <h3>Early Life:</h3>
             <ul>
-              <li>1894:Born in Bhera, Shahpur District, punjab, British India to Parmeshwari Sahai Bhatnagar, a school master,
+              <li>1894: Born in Bhera, Shahpur District, punjab, British India to Parmeshwari Sahai Bhatnagar, a school master,
                 and his wife.</li>
               <li>1916-1919: Completed Bsc. with major in Physics, and MSc in chemistry from Forman Christian College, Punjab.</li>
               <li>1921: Left for England, earned his D.Sc. degree from the London University under the guidance of chemistry
                 professor Frederick G. Donnan.</li>
             </ul>
           </section>
-          <section id="career">
+          <section id="career" class="bio">
             <h3>Career:</h3>
             <ul>
               <li>1921: After his return to India, he joined Banaras Hindu University (BHU) as a professor of chemistry</li>
@@ -58,7 +58,7 @@
                 at New Delhi, National Chemical Laboratory at Pune) were established.</li>
             </ul>
           </section>
-          <section id="major-works">
+          <section id="major-works" class="bio">
             <h3>Major Works:</h3>
             <ul>
               <li>His major innovation was improving the procedure for drilling crude oil.</li>
@@ -68,13 +68,13 @@
                 by a British firm.</li>
             </ul>
           </section>
-          <section id="death">
+          <section id="death" class="bio">
             <h3>Death:</h3>
             <ul>
               <li>1955: He died of a heart attack in New Delhi, India, aged only 60.</li>
             </ul>
           </section>
-          <section id="awards">
+          <section id="awards" class="bio">
             <h3>Awards &amp; Achievements:</h3>
             <ul>
               <li>1936: He was appointed an Officer of the Order of the British Empire for his excellent contributions to pure
@@ -88,12 +88,10 @@
           </section>
         </article>
       </main>
-
-
       <aside id="sidebar">
         <div id="quote">
           <blockquote>
-              <i class="fas fa-quote-left fa-4x fa-pull-left fa-border"></i>
+            <i class="fas fa-quote-left fa-3x fa-pull-left fa-border"></i>
             <p>"Dr. Bhatnagar was a special combination of many things, added to which was a tremendous energy with an enthusiasm
             to achieve things. The result was he left a record of achievement which was truly remarkable. I can truly say
             that but for Dr. Bhatnagar you could not have seen today the chain of national laboratories."</p>
@@ -101,6 +99,7 @@
           </blockquote>
         </div>
         <div id="link">
+          <i class="fas fa-external-link-alt fa-3x fa-pull-left fa-border"></i> 
           <h2>External Link:</h2>
           <p>Care to know more about this great Scientist? Just read <a href="https://en.wikipedia.org/wiki/Shanti_Swaroop_Bhatnagar"
             id="tribute-link" target="_blank">This Article</a>
@@ -109,6 +108,27 @@
       </aside>
     </div>
   </div>
+  <P id="report"></P>
+  <script>
+    var report = document.getElementById("report");
+
+function getFontSize() {
+  el=document.getElementById("img-caption");
+    var body = window.getComputedStyle(el, null);
+    if (body) {
+        var fontSize = body.getPropertyValue("font-size");
+        if (fontSize) {
+            fontSize = fontSize.replace("px", "");
+            fontSize = Math.round(fontSize * 10) / 10;
+            report.textContent = "Current root font-size: " + fontSize + "px - Viewport width: " + document.documentElement.clientWidth + "px";
+        }
+    }
+}
+if (report) {
+    getFontSize();
+    window.addEventListener("resize", getFontSize, false);
+}
+  </script>
 </body>
 
 </html>
