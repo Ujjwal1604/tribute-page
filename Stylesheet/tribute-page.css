@@ -88,7 +88,7 @@
 }
 @media (max-width: 1024px) {
   #content-sidebar {
-    width: 92vw;
+    width: 95vw;
     justify-self: center;
     grid-area: main-content;
     display: grid;
@@ -115,8 +115,8 @@
 }
 @media (min-width: 1025px) {
   #content-sidebar {
-    width: 92vw;
-    margin: 0 auto;
+    width: 95vw;
+    justify-self: center;
     grid-area: main-content;
     display: grid;
     grid-template-columns: 2fr 1fr;
