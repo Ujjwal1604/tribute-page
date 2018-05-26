@@ -28,8 +28,7 @@
     "header"
     "image"
     "main-content";
-  grid-row-gap: 1rem;
-  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
   hyphens: auto;
   background: url("../Image/wood.jpg");
   background-size: contain;
@@ -43,7 +42,7 @@
   text-align: center;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.39);
   padding: 0px 3rem;
-  
+  margin-top:2rem; 
 }
 #mainhead {
   font-weight: bold;
@@ -87,7 +86,7 @@
   content: "\A";
   white-space: pre;
 }
-@media (max-width: 1025px) {
+@media (max-width: 1024px) {
   #content-sidebar {
     width: 92vw;
     justify-self: center;
@@ -98,7 +97,7 @@
     grid-template-areas:
       "content"
       "side-bar";
-    grid-row-gap: 1.1rem;
+    grid-row-gap: 2rem;
   }
 
   #sidebar {
@@ -109,7 +108,8 @@
     grid-template-areas:
       "quote"
       "link";
-    grid-row-gap: 1.1rem;
+    grid-row-gap: 2rem;
+    margin-bottom:2rem;
   }
 
 }
@@ -122,7 +122,7 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "content sidebar";
-    grid-column-gap: 1.1rem;
+    grid-column-gap: 2rem;
   }
   #sidebar {
     grid-area: sidebar;
@@ -133,6 +133,9 @@
       "quote"
       "link";
     align-items: start;
+  }
+  #tribute-info {
+    margin-bottom: 2rem;
   }
 }
 #tribute-info {
